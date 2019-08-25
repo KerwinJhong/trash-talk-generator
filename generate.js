@@ -19,7 +19,7 @@ function generateComment(options) {
     collection = collection.concat(sample(task.engineer), sample(phrase))
   }
 
-  if (options.uppercase === 'on') {
+  if (options.designer === 'on') {
     collection = collection.concat(sample(task.designer), sample(phrase))
   }
 
@@ -34,9 +34,6 @@ function generateComment(options) {
   if (Object.keys(options).length > 1) {
     return '工作太多了，你要爆肝囉'
   }
-
-  console.log(options)
-  console.log(collection)
   return collection[0] + collection[1]
 }
 
