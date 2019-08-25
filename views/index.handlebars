@@ -1,0 +1,55 @@
+
+          <form method="POST" action="/">
+            <div class="card engineer">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="form-group form-row mb-2 align-items-center">
+                  <label for="engineer" class="col-md-2 col-form-label">美女工程師</label>
+                    <div class="col-md-10">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="engineer" name="engineer" {{#if options.engineer}} checked {{/if}}>
+                        <label class="custom-control-label" for="engineer"></label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card designer">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="form-group form-row mb-2 align-items-center">
+                  <label for="designer" class="col-md-2 col-form-label">宅男設計師</label>
+                  <div class="col-md-10">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="designer" name="designer" {{#if options.designer}} checked {{/if}}>
+                      <label class="custom-control-label" for="designer"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card founder">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="form-group form-row mb-2 align-items-center">
+                  <label for="founder" class="col-md-2 col-form-label">中年Founder</label>
+                  <div class="col-md-10">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="founder" name="founder" {{#if options.founder}} checked {{/if}}>
+                      <label class="custom-control-label" for="founder"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {{#if comment}}
+            <div class="alert alert-info" role="alert">
+                <span class="mr-2">你的幹話</span> <code>{{comment}}</code>
+            </div>
+            {{/if}}
+
+            <button class="btn btn-success" type="submit">產生妳的幹話～～～</button>
+          </form>

@@ -1,0 +1,39 @@
+div.engineer {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+div.designer {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+div.founder {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+div.engineer,
+div.designer,
+div.founder {
+    height: 600px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 80% 20%;
+}
+
+img {
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.alert-info {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
