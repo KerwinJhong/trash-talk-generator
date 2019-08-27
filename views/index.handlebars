@@ -47,7 +47,11 @@
 
             {{#if comment}}
             <div class="alert alert-info" role="alert">
-                <span class="mr-2">你的幹話</span> <code>{{comment}}</code>
+                <span class="mr-2">你的幹話</span> <code>
+                  {{#if options.engineer}} 美女工程師覺得，{{/if}}
+                  {{#if options.designer}} 宅男設計師覺得，{{/if}}
+                  {{#if options.founder}} 中年Founder覺得，{{/if}}
+                  {{comment}}</code>
             </div>
             {{/if}}
 
