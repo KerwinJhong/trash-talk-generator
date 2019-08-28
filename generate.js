@@ -6,8 +6,8 @@ function sample(array) {
 function generateComment(options) {
   const task = {
     engineer: ['加個按鈕', '加新功能', '切個版', '改一點code'],
-    designer: ['畫一張圖', '改個 logo', '順便幫忙設計一下', '隨便換個設計'],
-    founder: ['週末加班', '要能賺錢', '想個 business model', '找 VC 募錢']
+    designer: ['畫一張圖', '改個logo', '順便幫忙設計一下', '隨便換個設計'],
+    founder: ['週末加班', '要能賺錢', '想個business model', '找VC募錢']
   }
 
   const phrase = ['很簡單', '很容易', '很快', '很正常']
@@ -16,15 +16,27 @@ function generateComment(options) {
   let collection = []
 
   if (options.engineer === 'on') {
-    collection = collection.concat(sample(task.engineer), sample(phrase))
+    collection = collection.concat(
+      ['美女工程師'],
+      sample(task.engineer),
+      sample(phrase)
+    )
   }
 
   if (options.designer === 'on') {
-    collection = collection.concat(sample(task.designer), sample(phrase))
+    collection = collection.concat(
+      ['宅男設計師'],
+      sample(task.designer),
+      sample(phrase)
+    )
   }
 
   if (options.founder === 'on') {
-    collection = collection.concat(sample(task.founder), sample(phrase))
+    collection = collection.concat(
+      ['中年founder'],
+      sample(task.founder),
+      sample(phrase)
+    )
   }
 
   if (collection.length === 0) {
@@ -34,7 +46,8 @@ function generateComment(options) {
   if (Object.keys(options).length > 1) {
     return '工作太多了，你要爆肝囉'
   }
-  return collection[0] + collection[1]
+  console.log(collection)
+  return collection[0] + collection[1] + collection[2]
 }
 
 module.exports = generateComment
